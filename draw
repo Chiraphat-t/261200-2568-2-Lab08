@@ -1,0 +1,25 @@
+public class draw implements Runnable{
+    private String color;
+    private int x,y;
+
+    public draw(String color ,int x ,int y){
+        this.color=color;
+        this.x=x;
+        this.y=y;
+
+    }
+
+    public void run(){
+        Turtle t = new Turtle(x, y);
+        t.penColor(color);
+        t.speed(25);
+
+        for (int i = 0; i < 5; i++) {
+            t.forward(20);
+            t.right(144);
+
+        }
+        t.up();
+        t.forward(-10);
+    }
+}
